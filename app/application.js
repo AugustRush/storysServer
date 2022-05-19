@@ -1,10 +1,13 @@
-var koa = require('koa');
-const app = new koa();
+var Koa = require('koa');
+// const Router = require('koa-router');
+const BodyParser = require('koa-bodyparser');
+const router = require('./routes/index');
+const app = new Koa();
 
-app.use(async (ctx, next) => {
-    console.log(ctx);
-    // ctx.response.type = "plain/html";
-    ctx.response.body = "hello, august rush";
-});
+const bparser = new BodyParser();
+
+app.use(bparser);
+
+app.use(router.routes());
 
 app.listen(3000);
