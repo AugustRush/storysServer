@@ -1,0 +1,14 @@
+{
+  "name": "storyssever",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/application.js",
+  "scripts": {
+    "start": "node app/application.js"
+  },
+  "author": "August Rush",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.4"
+  }
+}
